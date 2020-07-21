@@ -10,3 +10,6 @@ spring:
 
 mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
+#configuration:
+#    local-cache-scope: statement
+

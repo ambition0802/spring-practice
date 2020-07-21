@@ -1,6 +1,9 @@
 package com.huang.spring.practice.user.dto;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+
     private Long id;
 
     private String name;
