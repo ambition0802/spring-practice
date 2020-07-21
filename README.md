@@ -8,6 +8,7 @@
 
 ### SpringBoot整合其他组件
 1. [SpringBoot整合MySQL和Mybatis](https://github.com/ambition0802/spring-practice/wiki/SpringBoot%E6%95%B4%E5%90%88MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8CMybatis)  
+2. [SpringBoot事务使用及注意事项](https://github.com/ambition0802/spring-practice/wiki/SpringBoot%E4%BA%8B%E5%8A%A1%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
 
 
 ### SpringBoot踩到的坑
