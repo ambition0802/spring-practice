@@ -13,3 +13,7 @@
 
 ### SpringBoot踩到的坑
 1. [SpringBoot事务使用及注意事项](https://github.com/ambition0802/spring-practice/wiki/SpringBoot%E4%BA%8B%E5%8A%A1%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+
+
+### 其他
+1. [springboot如何构建独立可执行的jar包](https://github.com/ambition0802/spring-practice/wiki/springboot%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%9A%84jar%E5%8C%85)
