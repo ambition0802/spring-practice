@@ -1,0 +1,1 @@
+INSERT INTO user (id, name, age, city) VALUES (1, '小明', 18, '上海');

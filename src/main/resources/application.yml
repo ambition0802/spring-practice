@@ -3,10 +3,26 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/spring_practice?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
-    username: spring-practice
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.h2.Driver
+    # 内存模式
+    url: jdbc:h2:mem:spring-practice
+    # 嵌入模式
+    # url:jdbc:h2:file:E:/H2/mybatis
+    # 初始化数据表 DDL
+    schema: classpath:sql/init.sql
+    #  初始化数据 DML
+    data: classpath:sql/data.sql
+  h2:
+    # 开启console 访问 默认false
+    console:
+      enabled: true
+      settings:
+        # 开启h2 console 跟踪 方便调试  默认 false
+        trace: true
+        # 允许console 远程访问 默认false
+        web-allow-others: true
+      # h2 访问路径上下文
+      path: /h2-console
 
 mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
