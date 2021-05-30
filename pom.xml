@@ -31,7 +31,7 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
-		<!-- 开启基于动态代理的Spring事务支持 -->
+		<!-- Spring事务支持 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
@@ -54,7 +54,7 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.200</version>
-			<scope>test</scope>
+			<!--<scope>test</scope>-->
 		</dependency>
 
 		<!--mybatis-->
@@ -71,7 +71,15 @@
 			<version>1.2.60.sec10</version>
 		</dependency>
 
-		<!-- aspectj（代码织入） -->
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- aspectj（代码织入）(aspectjrt的代码包含在aspectjweaver中) -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -118,6 +126,12 @@
 			<artifactId>oval</artifactId>
 			<version>3.1.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -146,7 +160,10 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			<!-- 通过AspectJ进行编译期织入 -->
+			<!-- 通过AspectJ进行编译期织入
+				这个插件会绑定到编译期，采用的应该是编译后织入的方式，在maven-compiler-plugin处理完之后再工作的。
+				不要以为这个插件多厉害，说白了他其实就是对aspectjtools.jar的一个mojo封装而已，去看他的依赖树就会很清楚
+				我打你妈的，这篇文章真的写得好：https://blog.mythsman.com/post/5d301cf2976abc05b34546be/ -->
 			<!--<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
